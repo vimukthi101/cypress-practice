@@ -1,0 +1,42 @@
+name: Cypress Regression Run
+
+on:
+  push:
+    branches:
+      - '**'
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1,2]
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v5.0.0
+
+      - name: run cypress
+        uses: cypress-io/github-action@v6.5.0
+        with:
+          parallel: true
+          record: true
+          ci_build_id: ${{ github.run_id }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      - name: upload artifcats
+        uses: actions/upload-artifact@v4.6.2
+        with: 
+          name: mocha-awesome-report
+          overwrite: true
+          path: mochawesome-report/
+          
