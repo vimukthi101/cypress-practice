@@ -1,0 +1,26 @@
+# =========================
+# Node.js / npm / yarn
+# =========================
+node_modules/
+package-lock.json
+
+# =========================
+# Cypress
+# =========================
+# Cypress screenshots and videos
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Cypress config output
+cypress.env.json
+results/
+reports/
+
+# =========================
+# IntelliJ IDEA / JetBrains
+# =========================
+.idea/
+*.iml
+out/
+logs/
