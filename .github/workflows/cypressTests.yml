@@ -29,7 +29,7 @@ jobs:
         with:
           parallel: true
           record: true
-          ci_build_id: ${{ github.run_id }}
+          ci-build-id: ${{ github.run_id }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
