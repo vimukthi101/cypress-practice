@@ -1,0 +1,19 @@
+{
+  "name": "cypress-practice",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-mochawesome-reporter": "^4.0.0",
+    "typescript": "^5.9.2"
+  }
+}

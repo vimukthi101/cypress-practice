@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "typeRoots": ["node_modules/@types", "./types"],
+    "lib": ["dom", "esnext"],
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+  },
+  "include": ["**/*.ts", "src"]
+}
